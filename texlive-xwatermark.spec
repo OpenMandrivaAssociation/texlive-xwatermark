@@ -1,11 +1,11 @@
-# revision 23545
+# revision 24682
 # category Package
 # catalog-ctan /macros/latex/contrib/xwatermark
-# catalog-date 2011-08-12 13:59:10 +0200
+# catalog-date 2011-11-26 09:47:23 +0100
 # catalog-license lppl1.3
-# catalog-version 1.5.1
+# catalog-version 1.5.2
 Name:		texlive-xwatermark
-Version:	1.5.1
+Version:	1.5.2
 Release:	1
 Summary:	Graphics and text watermarks on selected pages
 Group:		Publishing
@@ -17,27 +17,25 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The package extends the author's draftmark and the watermark
 packages.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
