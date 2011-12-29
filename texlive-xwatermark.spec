@@ -22,16 +22,8 @@ Requires(post):	texlive-kpathsea
 The package extends the author's draftmark and the watermark
 packages.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -52,7 +44,6 @@ packages.
 %doc %{_texmfdistdir}/doc/latex/xwatermark/xwatermark-guide.cfg
 %doc %{_texmfdistdir}/doc/latex/xwatermark/xwatermark-guide.pdf
 %doc %{_texmfdistdir}/doc/latex/xwatermark/xwatermark-guide.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -63,5 +54,3 @@ packages.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
