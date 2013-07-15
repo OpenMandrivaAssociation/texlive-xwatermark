@@ -1,12 +1,12 @@
-# revision 25564
+# revision 28090
 # category Package
 # catalog-ctan /macros/latex/contrib/xwatermark
-# catalog-date 2012-02-01 12:32:07 +0100
+# catalog-date 2012-10-26 10:22:27 +0200
 # catalog-license lppl1.3
-# catalog-version 1.5.2a
+# catalog-version 1.5.2d
 Name:		texlive-xwatermark
-Version:	1.5.2a
-Release:	3
+Version:	1.5.2d
+Release:	1
 Summary:	Graphics and text watermarks on selected pages
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/xwatermark
@@ -34,17 +34,11 @@ packages.
 %files
 %{_texmfdistdir}/tex/latex/xwatermark/xwatermark.sty
 %doc %{_texmfdistdir}/doc/latex/xwatermark/README
-%doc %{_texmfdistdir}/doc/latex/xwatermark/tab-globaloptions.tex
-%doc %{_texmfdistdir}/doc/latex/xwatermark/tab-localoptions.tex
-%doc %{_texmfdistdir}/doc/latex/xwatermark/xwatermark-examples.cfg
-%doc %{_texmfdistdir}/doc/latex/xwatermark/xwatermark-examples1.pdf
 %doc %{_texmfdistdir}/doc/latex/xwatermark/xwatermark-examples1.tex
 %doc %{_texmfdistdir}/doc/latex/xwatermark/xwatermark-examples2.pdf
 %doc %{_texmfdistdir}/doc/latex/xwatermark/xwatermark-examples2.tex
-%doc %{_texmfdistdir}/doc/latex/xwatermark/xwatermark-guide.cfg
 %doc %{_texmfdistdir}/doc/latex/xwatermark/xwatermark-guide.pdf
 %doc %{_texmfdistdir}/doc/latex/xwatermark/xwatermark-guide.tex
-%doc %{_texmfdistdir}/doc/latex/xwatermark/xwatermark-test-20120201.tex
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,6 +52,10 @@ cp -fpar tex doc %{buildroot}%{_texmfdistdir}
 
 
 %changelog
+* Tue Oct 30 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.5.2d-1
++ Revision: 820887
+- Update to latest release.
+
 * Fri Mar 09 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.5.2a-3
 + Revision: 783481
 - rebuild without scriptlet dependencies
