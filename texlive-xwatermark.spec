@@ -6,7 +6,7 @@
 # catalog-version 1.5.2d
 Name:		texlive-xwatermark
 Version:	1.5.2d
-Release:	3
+Release:	4
 Summary:	Graphics and text watermarks on selected pages
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/xwatermark
