@@ -1,6 +1,6 @@
 Name:		texlive-xwatermark
 Version:	61719
-Release:	1
+Release:	2
 Summary:	Graphics and text watermarks on selected pages
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/xwatermark
